@@ -5,8 +5,12 @@ build() {
   # install dbtbigquery
   pip install dbt-bigquery
   
-  cp config_files/profiles.yml ~/.dbt/profiles.yml
+  # making a folder to copy the profile file
+  mkdir ~/.dbt
 
+  cp config_files/profiles.yml ~/.dbt/profiles.yml
+  
+  # printing version to check whether or not it was installed
   dbt --version
  
 }
@@ -23,7 +27,7 @@ up() {
 
 config() {
 
-  export GOOGLE_APPLICATION_CREDENTIALS='/tmp/my_key.json'
+  echo "To do.."
  
 }
 
