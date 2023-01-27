@@ -1,9 +1,9 @@
-CREATE TABLE `northwind.categories` (
+CREATE TABLE IF NOT EXISTS `northwind.categories` (
     `category_id` INT64 NOT NULL,
     `category_name` STRING NOT NULL,
     `description` STRING
 );
-CREATE TABLE `northwind.customers` (
+CREATE TABLE IF NOT EXISTS `northwind.customers` (
     `customer_id` STRING NOT NULL,
     `company_name` STRING NOT NULL,
     `contact_name` STRING,
@@ -15,7 +15,7 @@ CREATE TABLE `northwind.customers` (
     `country` STRING,
     `phone` STRING
 );
-CREATE TABLE `northwind.employees` (
+CREATE TABLE IF NOT EXISTS `northwind.employees` (
     `employee_id` INT64 NOT NULL,
     `last_name` STRING NOT NULL,
     `first_name` STRING NOT NULL,
@@ -35,7 +35,7 @@ CREATE TABLE `northwind.employees` (
     `photo_path` STRING,
 	`salary` FLOAT64
 );
-CREATE TABLE `northwind.order_details` (
+CREATE TABLE IF NOT EXISTS `northwind.order_details` (
     `order_id` INT64 NOT NULL,
     `product_id` INT64 NOT NULL,
     `unit_price` FLOAT64 NOT NULL,
@@ -43,7 +43,7 @@ CREATE TABLE `northwind.order_details` (
     `discount` FLOAT64 NOT NULL
 );
 
-CREATE TABLE `northwind.orders` (
+CREATE TABLE IF NOT EXISTS `northwind.orders` (
     `order_id` INT64 NOT NULL,
     `customer_id` STRING,
     `employee_id` INT64,
@@ -59,7 +59,7 @@ CREATE TABLE `northwind.orders` (
     `ship_postal_code` STRING,
     `ship_country` STRING
 );
-CREATE TABLE `northwind.products` (
+CREATE TABLE IF NOT EXISTS `northwind.products` (
     `product_id` INT64 NOT NULL,
     `product_name` STRING NOT NULL,
     `supplier_id` INT64,
@@ -72,12 +72,12 @@ CREATE TABLE `northwind.products` (
     `discontinued` INT64 NOT NULL
 );
 
-CREATE TABLE `northwind.shippers` (
+CREATE TABLE IF NOT EXISTS `northwind.shippers` (
     `shipper_id` INT64 NOT NULL,
     `company_name` STRING NOT NULL,
     `phone` STRING
 );
-CREATE TABLE `northwind.suppliers` (
+CREATE TABLE IF NOT EXISTS `northwind.suppliers` (
     `supplier_id` INT64 NOT NULL,
     `company_name` STRING NOT NULL,
     `contact_name` STRING,
