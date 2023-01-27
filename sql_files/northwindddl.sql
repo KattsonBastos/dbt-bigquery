@@ -1,93 +1,93 @@
-CREATE TABLE categories (
-    category_id smallint NOT NULL,
-    category_name varchar(15) NOT NULL,
-    description VARCHAR(max)
+CREATE TABLE my_dataset.categories (
+    `category_id` INT64 NOT NULL,
+    `category_name` STRING NOT NULL,
+    `description` STRING
 );
-CREATE TABLE customers (
-    customer_id varchar(40) NOT NULL,
-    company_name varchar(40) NOT NULL,
-    contact_name varchar(30),
-    contact_title varchar(30),
-    address varchar(60),
-    city varchar(15),
-    region varchar(15),
-    postal_code varchar(10),
-    country varchar(15),
-    phone varchar(24)
+CREATE TABLE my_dataset.customers (
+    `customer_id` STRING NOT NULL,
+    `company_name` STRING NOT NULL,
+    `contact_name` STRING,
+    `contact_title` STRING,
+    `address` STRING,
+    `city` STRING,
+    `region` STRING,
+    `postal_code` STRING,
+    `country` STRING,
+    `phone` STRING
 );
-CREATE TABLE employees (
-    employee_id smallint NOT NULL,
-    last_name varchar(20) NOT NULL,
-    first_name varchar(10) NOT NULL,
-    title varchar(30),
-    title_of_courtesy varchar(25),
-    birth_date date,
-    hire_date date,
-    address varchar(60),
-    city varchar(15),
-    region varchar(15),
-    postal_code varchar(10),
-    country varchar(15),
-    home_phone varchar(24),
-    extension varchar(4),
-    notes varchar(max),
-    reports_to smallint,
-    photo_path varchar(255),
-	salary real
+CREATE TABLE my_dataset.employees (
+    `employee_id` INT64 NOT NULL,
+    `last_name` STRING NOT NULL,
+    `first_name` STRING NOT NULL,
+    `title` STRING,
+    `title_of_courtesy` STRING,
+    `birth_date` DATE,
+    `hire_date` DATE,
+    `address` STRING,
+    `city` STRING,
+    `region` STRING,
+    `postal_code` STRING,
+    `country` STRING,
+    `home_phone` STRING,
+    `extension` STRING,
+    `notes` STRING,
+    `reports_to` INT64,
+    `photo_path` STRING,
+	`salary` FLOAT64
 );
-CREATE TABLE order_details (
-    order_id smallint NOT NULL,
-    product_id smallint NOT NULL,
-    unit_price real NOT NULL,
-    quantity smallint NOT NULL,
-    discount real NOT NULL
-);
-
-CREATE TABLE orders (
-    order_id smallint NOT NULL,
-    customer_id bpchar,
-    employee_id smallint,
-    order_date date,
-    required_date date,
-    shipped_date date,
-    ship_via smallint,
-    freight real,
-    ship_name varchar(40),
-    ship_address varchar(60),
-    ship_city varchar(15),
-    ship_region varchar(15),
-    ship_postal_code varchar(10),
-    ship_country varchar(15)
-);
-CREATE TABLE products (
-    product_id smallint NOT NULL,
-    product_name varchar(40) NOT NULL,
-    supplier_id smallint,
-    category_id smallint,
-    quantity_per_unit varchar(20),
-    unit_price real,
-    units_in_stock smallint,
-    units_on_order smallint,
-    reorder_level smallint,
-    discontinued integer NOT NULL
+CREATE TABLE my_dataset.order_details (
+    `order_id` INT64 NOT NULL,
+    `product_id` INT64 NOT NULL,
+    `unit_price` FLOAT64 NOT NULL,
+    `quantity` INT64 NOT NULL,
+    `discount` FLOAT64 NOT NULL
 );
 
-CREATE TABLE shippers (
-    shipper_id smallint NOT NULL,
-    company_name varchar(40) NOT NULL,
-    phone varchar(24)
+CREATE TABLE my_dataset.orders (
+    `order_id` INT64 NOT NULL,
+    `customer_id` bpchar,
+    `employee_id` INT64,
+    `order_date` DATE,
+    `required_date` DATE,
+    `shipped_date` DATE,
+    `ship_via` INT64,
+    `freight` FLOAT64,
+    `ship_name` STRING,
+    `ship_address` STRING,
+    `ship_city` STRING,
+    `ship_region` STRING,
+    `ship_postal_code` STRING,
+    `ship_country` STRING
 );
-CREATE TABLE suppliers (
-    supplier_id smallint NOT NULL,
-    company_name varchar(40) NOT NULL,
-    contact_name varchar(30),
-    contact_title varchar(30),
-    address varchar(60),
-    city varchar(15),
-    region varchar(15),
-    postal_code varchar(10),
-    country varchar(15),
-    phone varchar(24),
-    fax varchar(24),
-    homepage varchar(max)
+CREATE TABLE my_dataset.products (
+    `product_id` INT64 NOT NULL,
+    `product_name` STRING NOT NULL,
+    `supplier_id` INT64,
+    `category_id` INT64,
+    `quantity_per_unit` STRING,
+    `unit_price` FLOAT64,
+    `units_in_stock` INT64,
+    `units_on_order` INT64,
+    `reorder_level` INT64,
+    `discontinued` INT64 NOT NULL
+);
+
+CREATE TABLE my_dataset.shippers (
+    `shipper_id` INT64 NOT NULL,
+    `company_name` STRING NOT NULL,
+    `phone` STRING
+);
+CREATE TABLE my_dataset.suppliers (
+    `supplier_id` INT64 NOT NULL,
+    `company_name` STRING NOT NULL,
+    `contact_name` STRING,
+    `contact_title` STRING,
+    `address` STRING,
+    `city` STRING,
+    `region` STRING,
+    `postal_code` STRING,
+    `country` STRING,
+    `phone STRING`,
+    `fax STRING`,
+    `homepage` STRING
 );
