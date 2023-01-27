@@ -1,9 +1,9 @@
-CREATE TABLE my_dataset.categories (
+CREATE TABLE northwind.categories (
     `category_id` INT64 NOT NULL,
     `category_name` STRING NOT NULL,
     `description` STRING
 );
-CREATE TABLE my_dataset.customers (
+CREATE TABLE northwind.customers (
     `customer_id` STRING NOT NULL,
     `company_name` STRING NOT NULL,
     `contact_name` STRING,
@@ -15,7 +15,7 @@ CREATE TABLE my_dataset.customers (
     `country` STRING,
     `phone` STRING
 );
-CREATE TABLE my_dataset.employees (
+CREATE TABLE northwind.employees (
     `employee_id` INT64 NOT NULL,
     `last_name` STRING NOT NULL,
     `first_name` STRING NOT NULL,
@@ -35,7 +35,7 @@ CREATE TABLE my_dataset.employees (
     `photo_path` STRING,
 	`salary` FLOAT64
 );
-CREATE TABLE my_dataset.order_details (
+CREATE TABLE northwind.order_details (
     `order_id` INT64 NOT NULL,
     `product_id` INT64 NOT NULL,
     `unit_price` FLOAT64 NOT NULL,
@@ -43,7 +43,7 @@ CREATE TABLE my_dataset.order_details (
     `discount` FLOAT64 NOT NULL
 );
 
-CREATE TABLE my_dataset.orders (
+CREATE TABLE northwind.orders (
     `order_id` INT64 NOT NULL,
     `customer_id` bpchar,
     `employee_id` INT64,
@@ -59,7 +59,7 @@ CREATE TABLE my_dataset.orders (
     `ship_postal_code` STRING,
     `ship_country` STRING
 );
-CREATE TABLE my_dataset.products (
+CREATE TABLE northwind.products (
     `product_id` INT64 NOT NULL,
     `product_name` STRING NOT NULL,
     `supplier_id` INT64,
@@ -72,12 +72,12 @@ CREATE TABLE my_dataset.products (
     `discontinued` INT64 NOT NULL
 );
 
-CREATE TABLE my_dataset.shippers (
+CREATE TABLE northwind.shippers (
     `shipper_id` INT64 NOT NULL,
     `company_name` STRING NOT NULL,
     `phone` STRING
 );
-CREATE TABLE my_dataset.suppliers (
+CREATE TABLE northwind.suppliers (
     `supplier_id` INT64 NOT NULL,
     `company_name` STRING NOT NULL,
     `contact_name` STRING,
@@ -87,7 +87,7 @@ CREATE TABLE my_dataset.suppliers (
     `region` STRING,
     `postal_code` STRING,
     `country` STRING,
-    `phone STRING`,
-    `fax STRING`,
+    `phone` STRING,
+    `fax` STRING,
     `homepage` STRING
 );
