@@ -27,7 +27,9 @@ up() {
 
 config() {
 
-  echo "To do.."
+  cp my_key.json /tmp/
+
+  ls /tmp
  
 }
 
