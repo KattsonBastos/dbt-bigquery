@@ -27,7 +27,7 @@ up() {
 
 config() {
 
-  cp my_key.json /tmp/
+  mv my_key.json /tmp/
 
   ls /tmp
  
