@@ -1,7 +1,7 @@
 dbt_bq_project:
   outputs:
     dev:
-      dataset: base_dataset
+      dataset: br_ibge_pnadc
       job_execution_timeout_seconds: 300
       job_retries: 1
       location: US
