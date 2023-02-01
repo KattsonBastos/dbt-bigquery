@@ -38,3 +38,4 @@ models:
       +materialized: table
     br_ibge_pnadc:
       +materialized: incremental
+      +schema: br_ibge_pnadc

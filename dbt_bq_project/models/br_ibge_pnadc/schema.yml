@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: br_ibge_pnadc
+    description: "Microdados PNADC"
+    columns:
+      - name: ano
+        description: Ano
+      - name: trimestre
+        description: Trimestre
+      - name: id_uf
+        description: ID Unidade da Federação
+      - name: sigla_uf
+        description: Sigla da Unidade da Federação
+      - name: V1028
+        description: Peso do domicílio e das pessoas (Peso trimestral com correção de não entrevista com pós estratificação pela projeção de população)
