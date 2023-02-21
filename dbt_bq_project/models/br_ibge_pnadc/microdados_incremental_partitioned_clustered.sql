@@ -30,7 +30,7 @@ WITH pnadc_microdados AS (
 )
 SELECT 
     * 
-from pnadc_microdados
+FROM pnadc_microdados
 
 {% if is_incremental() %}
   -- this filter will only be applied on an incremental run
@@ -44,7 +44,7 @@ from pnadc_microdados
           EXTRACT(YEAR FROM CURRENT_DATE('America/Sao_Paulo')), 
           MAX(ano)) AS max_year 
       FROM" ~ this ~")"
-    ).columns[0].values()[0] 
+    ).columns[0].values()[0]
   %}
 
   WHERE ano = {{ max_year }} AND
