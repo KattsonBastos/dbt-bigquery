@@ -9,7 +9,7 @@
       "field": "ano",
       "data_type": "int64",
       "range": {
-        "start": 2010,
+        "start": 2012,
         "end": 2025,
         "interval": 1
       }
