@@ -1,0 +1,6 @@
+# Commands to start on workspace startup
+tasks:
+  - name: Setup & Build
+    before: ls
+    init: build env
+    command: bash ./setup.sh build
