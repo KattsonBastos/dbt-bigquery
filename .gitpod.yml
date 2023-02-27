@@ -1,6 +1,11 @@
 # Commands to start on workspace startup
 tasks:
-  - name: Setup & Build
-    before: ls
-    init: build env
-    command: bash ./setup.sh build
+  - name: Installing dbt-bigquery
+    init: echo build env
+    command: pip install dbt-bigquery
+  - name: Creating dbt config folder
+    init: echo creating config folder
+    command: mkdir ~/.dbt
+  - name: Copying profiles to the dbt config folder
+    init: echo copying profiles
+    command: cp config_files/profiles.yml ~/.dbt/profiles.yml
